@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Sea Battle</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="app">
+			<div class="battle__header">
+				<h1 class="battle__title">Морской бой</h1>
+				<span class="battle__subtitle">Проект учебного центра 
+				    <a href="https://delfa72.ru/" class="battle__link" target="_blank">"Дельфа"</a>
+                </span>
+			</div>
+			<div class="battle__body">
+				<div data-side="player"></div>
+				<div class="battle__menu">
+					<div class="battle__actions" data-scene="preparation">
+						<button class="battle__action" data-action="manually">
+							Расставить корабли вручную
+						</button>
+						<button class="battle__action" data-action="randomize">
+							Расставить корабли случайно
+						</button>
+					</div>
+
+					<div class="battle__actions hidden" data-scene="computer">
+						<div class="battlefield-status">Ваш ход</div>
+						<button class="battle__action" data-action="gaveup">Сдаться</button>
+						<button class="battle__action" data-action="again">
+							Играть еще раз
+						</button>
+					</div>
+				</div>
+				<div data-side="opponent"></div>
+			</div>
+		</div>
+
+		<script src="src/additional.js"></script>
+
+		<script src="src/Application.js"></script>
+		<script src="src/Scene.js"></script>
+
+		<script src="src/scenes/PreparationScene.js"></script>
+		<script src="src/scenes/ComputerScene.js"></script>
+		<script src="src/scenes/OnlineScene.js"></script>
+
+		<script src="src/Battlefield.js"></script>
+		<script src="src/BattlefieldView.js"></script>
+
+		<script src="src/Ship.js"></script>
+		<script src="src/ShipView.js"></script>
+
+		<script src="src/Shot.js"></script>
+		<script src="src/ShotView.js"></script>
+
+		<script src="socket.io/socket.io.js"></script>
+		<script src="src/script.js"></script>
+	</body>
+</html>
